@@ -1,0 +1,154 @@
+html{
+  margin: 0px;
+  padding: 0px;
+}
+
+
+body {
+  font-size: calc(10px + (24 - 10) * ((100vw - 300px) / (1600 - 300)));
+  text-align: center;
+}
+main{
+text-align: center;
+}
+.grid-item img{
+ width: 93%;
+ display: block;
+ padding: 2%;
+ margin-left: 2%;
+ border-radius: 30%;
+}
+.grid-item img:hover{
+-webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+h1{
+  height: 100px;
+  width: 220px;
+  padding-top: 3%;
+  background: linear-gradient(black, white);
+  animation: 
+  pulse 3s ease infinite alternate, 
+  nudge 5s linear infinite alternate;
+  border-radius: 100%;
+ margin-left: 42%;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    background-color: black;
+  }
+  50% {
+    background-color: white;
+  }
+}
+
+@keyframes nudge {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  
+  50% {
+    transform: translate(150px, 0);
+  }
+  
+  80% {
+    transform: translate(-150px, 0);
+  }
+}
+h2{
+  background: linear-gradient(black, white);
+  font-family: serif;
+}
+h3{
+  font-style: italic;
+  color: white;
+}
+p{
+ font-variant: small-caps;
+     display: block;
+     text-align: left;
+     padding-left: 1%;
+}
+
+
+#grid-floats .grid-item{
+float: left;
+ position: relative;
+ width: 20%;
+  height: 600px;
+  margin: 2%;
+  background: linear-gradient(black, white);
+  padding: 4px;
+  display: grid;
+  border-radius: 10%;
+} 
+#grid-floats .grid-item:nth-child(1){
+  width: 40%;
+  background: linear-gradient(black, white);
+}
+#grid-floats .grid-item:hover{
+  
+    -moz-box-shadow: 0 0 20px black;
+    -webkit-box-shadow: 0 0 20px black;
+    box-shadow: 0 0 20px black;
+}
+#grid-floats li{
+list-style: none;
+}
+section:after{
+  content: "";
+  clear: both;
+  display: block;
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+ #grid-flex .grid-item:nth-child(1){
+  width: 100%;
+  background-color: #12585e;
+  color: #def2ef;
+} 
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+   #grid-flex .grid-item:nth-child(1){
+  width: 70%;
+  background-color: #12585e;
+  color: #def2ef;
+}
+}
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+  
+}
+#grid-flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+#grid-flex .grid-item{
+  width: 20%;
+  height: 600px;
+  margin: 2%;
+ background: linear-gradient(black, white);
+  padding: 4px;
+  border-radius: 10%;
+}
+#grid-flex li{
+  list-style: none;
+}
+#grid-flex .grid-item:nth-child(1){
+  width: 40%;
+  background: linear-gradient(black, white);
+}
+#grid-flex .grid-item:hover{
+    -moz-box-shadow: 0 0 20px black;
+    -webkit-box-shadow: 0 0 20px black;
+    box-shadow: 0 0 20px black;
+  }
+
+
